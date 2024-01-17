@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-Up Form</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+  <section>
+    <nav class="stroke">
+      <ul>
+        <li><img src="../images/logo.svg" id="logo" /></li>
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="timetable.html">Расписание</a></li>
+        <li><a href="lastworks.html">Последние работы</a></li>
+        <li><a href="signup.html">Регистрация</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="container" id="regbg">
+    <form class="registration" method="GET" action="data.html">
+
+      <div class="title">[Регистрация на конференцию]</div>
+      
+
+      <br>
+
+      <label for="secname">
+        Фамилия
+        <br>
+        <input type="text" name="secname" id="secname" minlength="3" placeholder="Иванов" required />
+        <span class=" validity"></span>
+      </label>
+
+      <br>
+
+      <label for="firstname">
+        Имя
+        <br>
+        <input type="text" name="firstname" id="firstname" minlength="3" placeholder="Иван" required />
+        <span class=" validity"></span>
+      </label>
+
+      <br>
+
+      <label for="thierdname">
+        Отчество
+        <br>
+        <input type="text" name="thierdname" id="thierdname" minlength="3" placeholder="Иванович" required />
+        <span class=" validity"></span>
+      </label>
+
+      <br>
+
+      <label for="phone">
+        Phone number
+        <br>
+        <label>+7
+        </label>
+        <input type="text" placeholder="(123) 456-7890" name="txtInput" id="phone"
+          onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" required />
+        <span class=" validity"></span>
+      </label>
+      <br>
+
+      <label for="email">
+        Почта:
+        <br>
+        <input type="email" name="email" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          placeholder="username@hostname.rucom" equired />
+        <span class="validity"></span>
+      </label>
+      <br>
+
+      <label for="subject">Сфера участия:
+
+        <br>
+        <select name="subject" name="subject" id="subject" equired>
+          <option value="Math">Математика</option>
+          <option value="Phys">Физика</option>
+          <option value="IT">Информатика</option>
+        </select>
+      </label>
+      <br>
+
+      <label for="bday">
+        Дата рождения
+        <br>
+        <input type="date" id="bday" name="bday" id="bday" value="2005-07-22" />
+      </label>
+      <br>
+
+      <label for="esseyTopic">Доклад</label>
+      <br>
+      <label class="switch">
+        <input type="checkbox" name="check" id="esseyTopic" onclick="dynInput(this);" />
+        <span class="slider round"></span>
+      </label>
+
+      <p id="insertinputs" name="insertinputs"></p>
+
+
+
+
+      <div class="submit">
+        <input type="submit"> </input>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="../js/script.js">
+
+
+  </script>
+</body>
+
+</html>
